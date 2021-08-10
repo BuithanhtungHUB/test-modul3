@@ -23,3 +23,4 @@ Route::post('/create',[AgencyController::class,'store'])->name('agency.store');
 Route::get('/update/{id}',[AgencyController::class,'edit'])->name('agency.edit');
 Route::post('/update/{id}',[AgencyController::class,'update'])->name('agency.update');
 Route::get('/delete/{id}',[AgencyController::class,'destroy'])->name('agency.delete');
+Route::get('/search',[AgencyController::class,'search'])->name('agency.search');

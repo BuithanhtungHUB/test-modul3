@@ -14,7 +14,7 @@
                 <th scope="col">Địa chỉ</th>
                 <th scope="col">Tên người quản lý</th>
                 <th scope="col">Trạng Thái</th>
-                <th scope="col">Chức năng</th>
+                <th colspan="2">Chức năng</th>
             </tr>
             </thead>
             <tbody>
@@ -29,8 +29,8 @@
                 <td>{{$agency->address}}</td>
                 <td>{{$agency->manager}}</td>
                 <td>{{$agency->status->name}}</td>
-                <td><a href="" class="btn btn-infor">Edit</a></td>
-                <td><a href="" class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa đại lý này không?')">Delete</a></td>
+                <td><a href="{{route('agency.edit', $agency->id)}}" class="btn btn-info">Edit</a></td>
+                <td><a href="{{route('agency.delete', $agency->id)}}" class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa đại lý này không?')">Delete</a></td>
             </tr>
             @empty
             <tr>
